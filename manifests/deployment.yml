@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: harshitdockerizinganodejswebapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: harshitdockerizinganodejswebapp
+  template:
+    metadata:
+      labels:
+        app: harshitdockerizinganodejswebapp 
+    spec:
+      containers:
+        - name: harshitdockerizinganodejswebapp 
+          image: hbreg.azurecr.io/harshitdockerizinganodejswebapp
+          ports:
+          - containerPort: 8080
